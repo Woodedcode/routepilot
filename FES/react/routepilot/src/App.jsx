@@ -1,10 +1,13 @@
+import Dashboard from "./pages/Dashboard.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+
 function App() {
   return (
-    <div>
-      <h1>RoutePilot</h1>
-      <p>Sales Territory Management</p>
+    <div className="app">
+      <Sidebar />
+      <Dashboard />
     </div>
-  )
+  );
 }
 
 export default App;
