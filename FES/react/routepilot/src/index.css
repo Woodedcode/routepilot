@@ -115,3 +115,78 @@ main p {
   font-size: 32px;
   color: #111827;
 }
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* FOLLOW-UPS */
+
+.dashboard__followups {
+  margin-top: 32px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.dashboard__followups h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.follow-up-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.follow-up-item:last-child {
+  border-bottom: none;
+}
+
+.follow-up-item h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.follow-up-item p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.follow-up-item span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* FOLLOW-UP STATUS BADGES */
+
+.follow-up-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.follow-up-status.overdue {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.follow-up-status.today {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.follow-up-status.upcoming {
+  background-color: #dcfce7;
+  color: #166534;
+}
