@@ -5,7 +5,9 @@ import { useState } from "react";
 function Accounts() {
   const [search, setSearch] = useState("");
   const filteredAccounts = accounts.filter((account) =>
-    account.name.toLowerCase().includes(search.toLowerCase()),
+    account.name.toLowerCase().includes(search.toLowerCase()) ||
+    account.city.toLowerCase().includes(search.toLowerCase()) ||
+    account.type.toLowerCase().includes(search.toLowerCase())
   );
   return (
     <main className="accounts">
@@ -18,7 +20,10 @@ function Accounts() {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <p>{search}</p>
+      <p>{filteredAccounts.length} {filteredAccounts.length === 1 ? "Account found" : "Accounts found"}</p>
+      <p>{filteredAccounts.length === 0 && (
+        <p>Try searching by account name, city, or type.</p>
+      )}</p>
       {filteredAccounts.map((account) => (
         <AccountCard
           key={account.id}

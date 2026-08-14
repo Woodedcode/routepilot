@@ -12,7 +12,7 @@ const accounts = [
     id: 2,
     name: "Willhoite's",
     city: 'Grapevine, Tx',
-    type: 'Bar/Restaurant',
+    type: 'Restaurant',
     lastVisit: '08/04/2026',
     nextFollowUp: '08/31/2026',
     status: 'Active',
