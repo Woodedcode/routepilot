@@ -250,3 +250,18 @@ main p {
   font-size: 13px;
   color: #374151;
 }
+
+.accounts__search {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    margin: 20px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.accounts__search:focus {
+    border-color: #2563eb;
+}
