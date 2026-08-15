@@ -4,6 +4,7 @@ import RoutePlanner from "./pages/RoutePlanner.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {Link} from 'react-router-dom';
+import AccountDetails from "./pages/AccountDetails.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/accounts" element={<Accounts />} />
+          <Route path="/accounts/:id"element={<AccountDetails />} />
           <Route path="/route-planner" element={<RoutePlanner />} />
         </Routes>
       </div>

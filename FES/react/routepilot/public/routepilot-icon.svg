@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">RoutePilot Icon</title>
+  <desc id="desc">A navy rounded-square app icon with RP lettering, route arrow, compass ring, and map pin.</desc>
+
+  <defs>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#27c7ff"/>
+      <stop offset="100%" stop-color="#0a66ff"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#dff3ff"/>
+      <stop offset="46%" stop-color="#20b8ff"/>
+      <stop offset="100%" stop-color="#0a5fff"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#36d3ff"/>
+      <stop offset="100%" stop-color="#0a6cff"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="18" width="476" height="476" rx="92" fill="#071b48" stroke="url(#borderGrad)" stroke-width="18"/>
+
+  <g fill="none" stroke="#103a7c" stroke-width="5" opacity="0.55">
+    <path d="M38 128c52 10 70-42 122-34s50 38 96 14 78-61 147-34"/>
+    <path d="M26 193c62 13 72-36 131-27s63 44 113 20 76-56 143-27"/>
+    <path d="M43 350c65-10 76 42 136 29s70-48 129-25 74 62 137 37"/>
+    <path d="M31 414c58-17 88 23 141 8s75-54 133-37 84 52 151 22"/>
+  </g>
+
+  <circle cx="250" cy="245" r="150" fill="none" stroke="url(#ringGrad)" stroke-width="18" stroke-dasharray="165 40 115 35"/>
+  <path d="M250 52l20 74-20-10-20 10z" fill="url(#arrowGrad)"/>
+
+  <g fill="#ffffff">
+    <path d="M104 177h134c48 0 77 27 77 67 0 31-18 54-50 63l54 76h-66l-46-68h-38l-18 68H93l54-206zm75 88h45c20 0 32-9 32-24 0-13-10-20-29-20h-37z"/>
+    <path d="M293 194h91c48 0 79 28 79 70 0 50-39 84-101 84h-24l-10 35h-59l48-189zm57 100h20c24 0 38-11 38-29 0-15-11-23-31-23h-14z"/>
+  </g>
+
+  <path d="M69 411c67-45 122-48 180-87 38-26 83-37 147-47" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-dasharray="18 18"/>
+  <path d="M188 350l146-79-73 151-22-59z" fill="url(#arrowGrad)" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+
+  <g transform="translate(402 204)">
+    <path d="M0 0c-28 0-49 21-49 49 0 34 49 83 49 83s49-49 49-83C49 21 28 0 0 0z" fill="url(#borderGrad)"/>
+    <circle cx="0" cy="48" r="16" fill="#071b48"/>
+  </g>
+</svg>

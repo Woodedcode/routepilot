@@ -1,4 +1,7 @@
+import {Link} from 'react-router-dom';
+
 function AccountCard({
+    id,
     name,
     city,
     type,
@@ -7,7 +10,7 @@ function AccountCard({
     status
 }) {
     return (
-        <div className="account-card">
+        <Link to={`/accounts/${id}`} className="account-card">
             <div className="account-card__header">
                 <h3>{name}</h3>
                 <span>{status}</span>
@@ -20,7 +23,7 @@ function AccountCard({
                 <span>Last Visit: {lastVisit}</span>
                 <span>Next Follow-Up: {nextFollowUp}</span>
             </div>
-        </div>
+        </Link>
     )
 }
 
