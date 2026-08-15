@@ -24,7 +24,7 @@ const accounts = [
     type: 'Restaurant',
     lastVisit: '08/06/2026',
     nextFollowUp: '08/13/2026',
-    status: 'Active'
+    status: 'Closed'
   }
 ]
 

@@ -216,6 +216,9 @@ main p {
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 16px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .account-card__header {
@@ -285,3 +288,15 @@ main p {
   border-radius: 20px;
   margin-left: 8px;
 }
+
+.account-details__status.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.account-details__status.closed {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+

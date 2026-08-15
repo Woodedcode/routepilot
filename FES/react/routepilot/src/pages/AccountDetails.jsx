@@ -26,7 +26,11 @@ function AccountDetails() {
         </p>
         <p>
           <strong>Status:</strong>
-          <span className="account-details__status"> {account.status}</span>
+          <span
+            className={`account-details__status ${account.status.toLowerCase()}`}
+          >
+            {account.status}
+          </span>
         </p>
       </div>
     </main>
