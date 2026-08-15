@@ -5,19 +5,28 @@ import accounts from "../data/accounts";
 function AccountDetails() {
   const { id } = useParams();
   const [note, setNote] = useState("");
-  const [savedNotes, setSavedNotes] = useState([]);
+
+  const [savedNotes, setSavedNotes] = useState(() => {
+    const storedNotes = localStorage.getItem(`notes-${id}`);
+
+    return storedNotes ? JSON.parse(storedNotes) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(`notes-${id}`, JSON.stringify(savedNotes));
+  }, [savedNotes, id]);
 
   function handleSaveNote() {
+    if (note.trim() === "") {
+      return;
+    }
+
     const newNote = {
       text: note,
       date: new Date().toLocaleString(),
     };
 
-    if (note.trim() === "") {
-      return;
-    }
-
-    setSavedNotes([...savedNotes, newNote]);
+    setSavedNotes([newNote, ...savedNotes]);
     setNote("");
   }
 
@@ -55,25 +64,25 @@ function AccountDetails() {
         </p>
       </div>
       <section className="account-notes">
-  <h2>Notes</h2>
+        <h2>Notes</h2>
 
-  <textarea
-    value={note}
-    onChange={(event) => setNote(event.target.value)}
-    placeholder="Add a note..."
-  />
+        <textarea
+          value={note}
+          onChange={(event) => setNote(event.target.value)}
+          placeholder="Add a note..."
+        />
 
-  <button onClick={handleSaveNote}>Send note</button>
+        <button onClick={handleSaveNote}>Send note</button>
 
-  {savedNotes.length === 0 && <p>No notes yet.</p>}
+        {savedNotes.length === 0 && <p>No notes yet.</p>}
 
-  {savedNotes.map((savedNote, index) => (
-    <div className="account-notes__saved" key={index}>
-      <p>{savedNote.text}</p>
-      <span>{savedNote.date}</span>
-    </div>
-  ))}
-</section>
+        {savedNotes.map((savedNote, index) => (
+          <div className="account-notes__saved" key={index}>
+            <p>{savedNote.text}</p>
+            <span>{savedNote.date}</span>
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
