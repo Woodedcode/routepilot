@@ -299,4 +299,75 @@ main p {
   color: #b91c1c;
 }
 
+.account-details__back {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
 
+.account-details__back:hover {
+    text-decoration: underline;
+}
+
+.account-notes {
+  margin-top: 24px;
+  max-width: 700px;
+}
+
+.account-notes h2 {
+  margin-bottom: 12px;
+}
+
+.account-notes textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.account-notes textarea:focus {
+  border-color: #2563eb;
+}
+
+.account-notes button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.account-notes button:hover {
+  background-color: #1d4ed8;
+}
+
+.account-notes__saved {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.account-notes__saved p {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.account-notes__saved span {
+  font-size: 12px;
+  color: #6b7280;
+}

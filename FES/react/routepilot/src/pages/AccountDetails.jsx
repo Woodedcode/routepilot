@@ -1,8 +1,26 @@
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import accounts from "../data/accounts";
 
 function AccountDetails() {
   const { id } = useParams();
+  const [note, setNote] = useState("");
+  const [savedNotes, setSavedNotes] = useState([]);
+
+  function handleSaveNote() {
+    const newNote = {
+      text: note,
+      date: new Date().toLocaleString(),
+    };
+
+    if (note.trim() === "") {
+      return;
+    }
+
+    setSavedNotes([...savedNotes, newNote]);
+    setNote("");
+  }
+
   const account = accounts.find((account) => account.id === Number(id));
   if (!account) {
     return <h1>Account Not Found</h1>;
@@ -10,6 +28,9 @@ function AccountDetails() {
 
   return (
     <main className="account-details">
+      <Link to="/accounts" className="account-details__back">
+        ← Back to Accounts
+      </Link>
       <h1>{account.name}</h1>
       <div className="account-details__card">
         <p>
@@ -33,6 +54,26 @@ function AccountDetails() {
           </span>
         </p>
       </div>
+      <section className="account-notes">
+  <h2>Notes</h2>
+
+  <textarea
+    value={note}
+    onChange={(event) => setNote(event.target.value)}
+    placeholder="Add a note..."
+  />
+
+  <button onClick={handleSaveNote}>Send note</button>
+
+  {savedNotes.length === 0 && <p>No notes yet.</p>}
+
+  {savedNotes.map((savedNote, index) => (
+    <div className="account-notes__saved" key={index}>
+      <p>{savedNote.text}</p>
+      <span>{savedNote.date}</span>
+    </div>
+  ))}
+</section>
     </main>
   );
 }
